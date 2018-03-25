@@ -106,7 +106,7 @@ void RunCar()
         double angle=getAngleSteering();
 
         cout<<angle<<endl;
-        setControl(35,angle);
+        setControl(50,angle);
         cout<< chrono::duration<double, milli> (std::chrono::system_clock::now()-cur_time).count()<<endl;
     }
     while( waitKey(1)!=27);
@@ -351,7 +351,7 @@ terminate called after throwing an instance of 'cv::Exception'
 		}
 		int dau=(bamlephai-0.5)*2;
 		int tmp=(xLeftLane+xRightLane)/2+dau*10;
-		_p=(160-tmp)*8;
+		_p=(160-tmp)*5;
 		cout<<_p<<":"<<dau<<endl;
 		float angle=(_p);
 		circle(laneImg,Point(tmp,239),3,Scalar(255),2);
